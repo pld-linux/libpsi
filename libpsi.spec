@@ -1,19 +1,16 @@
-%define		_snapshot	20030217
+%define		_snap	031117
 Summary:	A library containing jabber functions
 Summary(pl):	Biblioteka zawieraj±ca funkcje jabbera
 Name:		libpsi
-Version:	%{_snapshot}
-Release:	4
+Version:	%{_snap}
+Release:	1
+Epoch:		1
 License:	GPL
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5: 94fd68eda467bffc4b760f2d28e1f867
-Patch0:		%{name}-am.patch
-Patch1:		%{name}-qssl.patch
-BuildRequires:	qt-plugin-ssl-devel >= 1.0
-BuildRequires:	qt-devel >= 3.1
-Requires:	qt >= 3.1
-Requires:	qt-plugin-ssl >= 1.0
+# Source0-md5:	29c6302a26549b667fa77c21a5e05b3f
+BuildRequires:	openssl-devel >= 0.9.7c
+Requires:	openssl >= 0.9.7c
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,9 +25,8 @@ psi i kopete.
 Summary:	Header files for libpsi
 Summary(pl):	Pliki nag³ówkowe dla libpsi
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
-Requires:	qt-devel >= 3.1
-Requires:	qt-plugin-ssl-devel >= 1.0
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	openssl-devel >= 0.9.7c
 
 %description devel
 Header files for libpsi.
@@ -40,19 +36,21 @@ Pliki nag³ówkowe dla libpsi.
 
 %prep
 %setup -q
-##%patch0 -p1
-%patch1 -p1
 
 %build
-%{__make} -f Makefile.cvs
-%configure
 
-%{__make} -C psi/libpsi
+%{__make} -f admin/Makefile.common cvs
+
+%configure \
+	--disable-rpath \
+	--enable-final
+
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} -C psi/libpsi install \
+%{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -64,8 +62,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libpsi.so
+%attr(755,root,root) %{_libdir}/libqssl.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/*
-%{_libdir}/*.la
+%{_libdir}/libpsi.la
+%{_libdir}/libqssl.la
