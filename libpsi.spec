@@ -3,16 +3,16 @@ Summary:	A library containing jabber functions
 Summary(pl):	Biblioteka zawieraj±ca funkcje jabbera
 Name:		libpsi
 Version:	%{_snapshot}
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-qssl.patch
-BuildRequires:	qssl-devel >= 1.0
+BuildRequires:	qt-plugin-ssl-devel >= 1.0
 BuildRequires:	qt-devel >= 3.1
 Requires:	qt >= 3.1
-Requires:	qssl >= 1.0
+Requires:	qt-plugin-ssl >= 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -32,7 +32,7 @@ Summary(pl):	Pliki nag³ówkowe dla libpsi
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	qt-devel >= 3.1
-Requires:	qssl-devel >= 1.0
+Requires:	qt-plugin-ssl-devel >= 1.0
 
 
 %description devel
