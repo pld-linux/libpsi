@@ -15,7 +15,6 @@ Requires:	qt >= 3.1
 Requires:	qt-plugin-ssl >= 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 libpsi contains jabber client functions used among others by psi and
 kopete.
@@ -31,7 +30,6 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	qt-devel >= 3.1
 Requires:	qt-plugin-ssl-devel >= 1.0
-
 
 %description devel
 Header files for libpsi.
