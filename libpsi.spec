@@ -8,6 +8,7 @@ License:	GPL
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-am.patch
+Patch1:         %{name}-qssl.patch
 BuildRequires:	qt-devel >= 3.1
 Requires:	qt >= 3.1
 Requires:	qssl >= 1.0
@@ -42,6 +43,7 @@ Pliki nag³ówkowe dla libpsi.
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} -f Makefile.cvs
