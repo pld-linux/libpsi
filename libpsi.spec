@@ -11,6 +11,7 @@ Group:		X11/Libraries
 Source0:	http://www.kernel.pl/~adgor/kde/%{name}-%{_snap}.tar.bz2
 # Source0-md5:	29c6302a26549b667fa77c21a5e05b3f
 BuildRequires:	openssl-devel >= 0.9.7c
+BuildRequires:	artsc-devel
 Requires:	openssl >= 0.9.7c
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
