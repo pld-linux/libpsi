@@ -1,4 +1,4 @@
-%define		_snapshot	20021108
+%define		_snapshot	20030217
 Summary:	A library containing jabber functions
 Summary(pl):	Biblioteka zawieraj±ca funkcje jabbera
 Name:		libpsi
@@ -41,7 +41,7 @@ Pliki nag³ówkowe dla libpsi.
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch0 -p1
+##%patch0 -p1
 %patch1 -p1
 
 %build
