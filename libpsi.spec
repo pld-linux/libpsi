@@ -3,7 +3,7 @@ Summary:	A library containing jabber functions
 Summary(pl):	Biblioteka zawieraj±ca funkcje jabbera
 Name:		libpsi
 Version:	%{_snapshot}
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
@@ -23,6 +23,17 @@ kopete.
 libpsi zawiera funkcje klienckie jabbera. Jest wykorzystywana m.in. w
 psi i kopete.
 
+%package devel
+Summary:	Header files for libsmi
+Summary(pl):	Pliki nag³ówkowe dla libsmi
+Group:		X11/Libraries
+Requires:	%{name} = %{version}
+
+%description devel
+Header files for libsmi.
+
+%description devel -l pl
+Pliki nag³ówkowe dla libsmi.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -48,5 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_includedir}/*
 %{_libdir}/libpsi.so
+
+%files devel
+%{_includedir}/*
