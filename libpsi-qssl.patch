@@ -1,0 +1,11 @@
+--- libpsi-20021108/psi/libpsi/src/stream.cpp.orig	Tue Oct 22 00:04:27 2002
++++ libpsi-20021108/psi/libpsi/src/stream.cpp	Fri Dec  6 23:51:25 2002
+@@ -30,7 +30,7 @@
+ 
+ #include"ndns.h"
+ #include"xmlfilter.h"
+-#include"../qssl/qssl.h"
++#include<qssl.h>
+ 
+ using namespace Jabber;
+ 
