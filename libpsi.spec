@@ -8,7 +8,7 @@ License:	GPL
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-am.patch
-Patch1:         %{name}-qssl.patch
+Patch1:		%{name}-qssl.patch
 BuildRequires:	qt-devel >= 3.1
 Requires:	qt >= 3.1
 Requires:	qssl >= 1.0
@@ -30,8 +30,8 @@ Summary:	Header files for libpsi
 Summary(pl):	Pliki nag³ówkowe dla libpsi
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
-Requires:       qt-devel >= 3.1
-Requires:       qssl-devel >= 1.0
+Requires:	qt-devel >= 3.1
+Requires:	qssl-devel >= 1.0
 
 
 %description devel
