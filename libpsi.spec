@@ -24,16 +24,16 @@ libpsi zawiera funkcje klienckie jabbera. Jest wykorzystywana m.in. w
 psi i kopete.
 
 %package devel
-Summary:	Header files for libsmi
-Summary(pl):	Pliki nag³ówkowe dla libsmi
-Group:		X11/Libraries
+Summary:	Header files for libpsi
+Summary(pl):	Pliki nag³ówkowe dla libpsi
+Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 
 %description devel
-Header files for libsmi.
+Header files for libpsi.
 
 %description devel -l pl
-Pliki nag³ówkowe dla libsmi.
+Pliki nag³ówkowe dla libpsi.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -59,7 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_libdir}/libpsi.so
+%attr(755,root,root) %{_libdir}/libpsi.so
 
 %files devel
+%defattr(644,root,root,755)
 %{_includedir}/*
