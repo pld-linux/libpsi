@@ -7,6 +7,7 @@ Release:	4
 License:	GPL
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5: 94fd68eda467bffc4b760f2d28e1f867
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-qssl.patch
 BuildRequires:	qt-plugin-ssl-devel >= 1.0
