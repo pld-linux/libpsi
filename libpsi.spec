@@ -9,6 +9,7 @@ Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-qssl.patch
+BuildRequires:	qssl-devel >= 1.0
 BuildRequires:	qt-devel >= 3.1
 Requires:	qt >= 3.1
 Requires:	qssl >= 1.0
