@@ -39,7 +39,7 @@ Header files for libpsi.
 Pliki nag³ówkowe dla libpsi.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 ##%patch0 -p1
 %patch1 -p1
 
