@@ -10,7 +10,7 @@ Group:		X11/Libraries
 # From kdenonbeta kde cvs module
 Source0:	http://ep09.pld-linux.org/~adgor/kde/%{name}-%{_snap}.tar.bz2
 # Source0-md5:	29c6302a26549b667fa77c21a5e05b3f
-BuildRequires:	openssl-devel >= 0.9.7c
+BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	artsc-devel
 Requires:	openssl >= 0.9.7c
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
