@@ -1,6 +1,6 @@
 %define		_snap	031117
-Summary:	A library containing jabber functions
-Summary(pl):	Biblioteka zawieraj±ca funkcje jabbera
+Summary:	A library containing Jabber functions
+Summary(pl):	Biblioteka zawieraj±ca funkcje Jabbera
 Name:		libpsi
 Version:	%{_snap}
 Release:	1
@@ -16,11 +16,11 @@ Requires:	openssl >= 0.9.7c
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-libpsi contains jabber client functions used among others by psi and
+libpsi contains Jabber client functions used among others by psi and
 kopete.
 
 %description -l pl
-libpsi zawiera funkcje klienckie jabbera. Jest wykorzystywana m.in. w
+libpsi zawiera funkcje klienckie Jabbera. Jest wykorzystywana m.in. w
 psi i kopete.
 
 %package devel
