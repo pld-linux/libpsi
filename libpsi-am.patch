@@ -1,6 +1,0 @@
---- libpsi/psi/libpsi/Makefile.am.orig	Thu Aug 29 19:14:51 2002
-+++ libpsi/psi/libpsi/Makefile.am	Fri Nov  8 23:09:13 2002
-@@ -1,2 +1,2 @@
--SUBDIRS = src example
-+SUBDIRS = src qssl
- 
