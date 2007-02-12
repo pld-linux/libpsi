@@ -1,6 +1,6 @@
 %define		_snap	031117
 Summary:	A library containing Jabber functions
-Summary(pl):	Biblioteka zawieraj±ca funkcje Jabbera
+Summary(pl.UTF-8):   Biblioteka zawierajƒÖca funkcje Jabbera
 Name:		libpsi
 Version:	%{_snap}
 Release:	1
@@ -19,13 +19,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 libpsi contains Jabber client functions used among others by psi and
 kopete.
 
-%description -l pl
+%description -l pl.UTF-8
 libpsi zawiera funkcje klienckie Jabbera. Jest wykorzystywana m.in. w
 psi i kopete.
 
 %package devel
 Summary:	Header files for libpsi
-Summary(pl):	Pliki nag≥Ûwkowe dla libpsi
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla libpsi
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	openssl-devel >= 0.9.7c
@@ -33,8 +33,8 @@ Requires:	openssl-devel >= 0.9.7c
 %description devel
 Header files for libpsi.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe dla libpsi.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe dla libpsi.
 
 %prep
 %setup -q
