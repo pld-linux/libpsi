@@ -1,6 +1,6 @@
 %define		_snap	031117
 Summary:	A library containing Jabber functions
-Summary(pl.UTF-8):   Biblioteka zawierająca funkcje Jabbera
+Summary(pl.UTF-8):	Biblioteka zawierająca funkcje Jabbera
 Name:		libpsi
 Version:	%{_snap}
 Release:	1
@@ -25,7 +25,7 @@ psi i kopete.
 
 %package devel
 Summary:	Header files for libpsi
-Summary(pl.UTF-8):   Pliki nagłówkowe dla libpsi
+Summary(pl.UTF-8):	Pliki nagłówkowe dla libpsi
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	openssl-devel >= 0.9.7c
